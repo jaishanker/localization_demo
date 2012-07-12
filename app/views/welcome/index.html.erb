@@ -3,3 +3,10 @@
 <p>
   <%= t("hello") %>
 </p>
+
+<ul>
+  <li><%= number_to_currency(100.0) %></li>
+  <li><%= l(Time.current, :format => :long) %></li>
+  <li><%= distance_of_time_in_words Time.now, Time.now + 2.hours %></li>
+  <li><%= User.human_attribute_name(:password) %></li>
+</ul>
