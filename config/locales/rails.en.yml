@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    errors:
+    models:
+    attributes:
+      user:
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
