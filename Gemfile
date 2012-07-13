@@ -22,6 +22,9 @@ end
 
 gem 'jquery-rails'
 gem 'rails-translate-routes'
+gem 'globalize3'
+gem 'friendly_id'
+gem 'rdiscount'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
