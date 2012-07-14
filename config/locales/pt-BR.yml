@@ -1,5 +1,10 @@
 pt-BR:
   hello: Olá Mundo
+  site_name: "Demonstração I18n"
   translation:
     en: Inglês
     pt-BR: Português
+  admin:
+    title: "Administração"
+  articles:
+    title: "Artigos"

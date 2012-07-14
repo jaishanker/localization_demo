@@ -3,6 +3,11 @@
 
 en:
   hello: "Hello world"
+  site_name: "I18n Demonstration"
   translation:
     en: English
     pt-BR: Portuguese
+  admin:
+    title: "Administration"
+  articles:
+    title: "Articles"
