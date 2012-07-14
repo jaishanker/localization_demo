@@ -1,3 +1,5 @@
 pt-BR:
   hello: Olá Mundo
-
+  translation:
+    en: Inglês
+    pt-BR: Português
