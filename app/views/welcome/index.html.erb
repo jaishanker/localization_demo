@@ -15,9 +15,3 @@
   <dd><%= [:title, :body, :body_html].map { |attr| Article.human_attribute_name(attr) }.join(", ") %></dd>
 </dl>
 
-<% content_for :footer_buttons do %>
- <%= link_to t("admin.title"),
-    admin_dashboard_path, :class => 'btn'  %>
- <%= link_to t("articles.title"),
-   articles_path, :class => 'btn'  %>
-<% end %>

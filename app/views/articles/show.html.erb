@@ -6,7 +6,3 @@
   <%=raw @article.body_html %>
 </div>
 
-<% content_for :footer_buttons do %>
-  <%= link_to t('.back', :default => t("helpers.links.back")),
-    articles_path, :class => 'btn'  %>
-<% end %>
