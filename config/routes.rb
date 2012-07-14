@@ -1,6 +1,4 @@
 I18nDemo::Application.routes.draw do
-  get "articles/show"
-
   devise_for :users
   resources :articles
   get "welcome/index", as: "welcome"
