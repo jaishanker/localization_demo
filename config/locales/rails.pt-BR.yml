@@ -207,8 +207,13 @@ pt-BR:
       <<: *errors
     models:
       user: "Usuário"
+      article: "Artigo"
     attributes:
       user:
         email: "E-mail"
         password: "Senha"
         password_confirmation: "Confirmar Senha"
+      article:
+        title: "Título"
+        body: "Conteúdo"
+        body_html: "Conteúdo em HTML"
