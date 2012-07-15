@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
       lang = lang[/^[a-z]{2}/]
       lang = :"pt-BR" if lang == "pt"
     end
-    I18n.locale = params[:locale] || lang
+    I18n.locale = params[:locale] || lang || I18n.default_locale
   end
 end
