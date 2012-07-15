@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
+ruby "1.9.3"
+
 gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'devise'
 
 # Gems used only for assets and not required
@@ -49,10 +50,16 @@ gem 'ActiveAdmin-Globalize3-inputs'
 # gem 'debugger'
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'rspec-rails'
   gem 'pry-rails'
 
   gem 'guard'
   gem 'guard-rspec'
   gem 'growl'
+end
+
+group :production do
+  gem 'pg'
+  gem 'thin'
 end

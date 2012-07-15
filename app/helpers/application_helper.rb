@@ -20,6 +20,9 @@ module ApplicationHelper
     options = params[:controller] == "articles" ? { class: "active" } : {}
     links << content_tag(:li, link_to(t("articles.title"), articles_path), options).html_safe
 
+    options = params[:controller] =~ /devise/i ? { class: "active" } : {}
+    links << content_tag(:li, link_to(t("devise.registrations.new.title"), new_user_registration_path), options).html_safe
+
     links << content_tag(:li, link_to(t("admin.title"), admin_dashboard_path)).html_safe
 
     content_tag(:ul, links.join("\n").html_safe, class: "nav")

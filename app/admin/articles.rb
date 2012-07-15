@@ -13,10 +13,10 @@ ActiveAdmin.register Article do
       I18n.available_locales.each do |locale|
         h3 I18n.t(locale, scope: ["translation"])
         div do
-          h4 article.translations.where(locale: locale).first.title
+          h4 article.translations.where(locale: locale).first.title rescue nil
         end
         div do
-          article.translations.where(locale: locale).first.body_html.html_safe
+          article.translations.where(locale: locale).first.body_html.html_safe rescue nil
         end
       end
     end

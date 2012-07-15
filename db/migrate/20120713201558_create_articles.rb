@@ -6,7 +6,7 @@ class CreateArticles < ActiveRecord::Migration
     end
     add_index :articles, :slug, unique: true
 
-    Article.create_translation_table! :title => :string, :body => :text
+    Article.create_translation_table! :title => :string, :body => :text, :body_html => :text
   end
 
   def down

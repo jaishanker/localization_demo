@@ -34,6 +34,8 @@ module I18nDemo
     config.i18n.available_locales = [:en, :"pt-BR"]
     config.i18n.default_locale = :"pt-BR"
 
+    config.i18n.fallbacks = true
+
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
@@ -59,5 +61,9 @@ module I18nDemo
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.assets.initialize_on_precompile = false
+
+    config.assets.precompile += %w(active_admin.js active_admin.css)
   end
 end
