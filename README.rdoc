@@ -31,3 +31,11 @@ The usual suspects:
   rails s
 
 #Fun
+
+== Blog Post
+
+This exercise app was create to back up the 2 part blog posts published at
+AkitaOnRails.com. Check them out:
+
+* http://akitaonrails.com/2012/07/14/internationalizacao-i18n-minima-em-rails-3-2-parte-1
+* http://akitaonrails.com/2012/07/14/internationalizacao-i18n-minima-em-rails-3-2-parte-2
