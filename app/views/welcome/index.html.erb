@@ -10,8 +10,5 @@
 
   <dt>Time</dt>
   <dd><%= distance_of_time_in_words(1.hour + 20.minutes) %></dd>
-
-  <dt>Article attributes</dt>
-  <dd><%= [:title, :body, :body_html].map { |attr| Article.human_attribute_name(attr) }.join(", ") %></dd>
 </dl>
 

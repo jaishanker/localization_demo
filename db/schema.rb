@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120714161124) do
+ActiveRecord::Schema.define(:version => 20120713204524) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -51,9 +51,9 @@ ActiveRecord::Schema.define(:version => 20120714161124) do
     t.string   "locale"
     t.string   "title"
     t.text     "body"
+    t.text     "body_html"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.text     "body_html"
   end
 
   add_index "article_translations", ["article_id"], :name => "index_article_translations_on_article_id"

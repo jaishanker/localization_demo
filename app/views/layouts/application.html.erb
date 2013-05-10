@@ -4,10 +4,64 @@
   <title><%= t("site_name") %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %><script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+ // Google AJAX API initialization and loading
+google.load("language", "1");
+ 
+function changeLanguage(lang)
+{
+   var source = document.getElementById("story").innerHTML;
+   var len = content.length;
+   var words = 500;
+   var sourcelang = "en";
+   // Limitation is 500 characters for a translation request
+ 
+   document.getElementById("translation").innerHTML = "";
+ 
+   for(i=0; i<=(len/words); i++) {
+        google.language.translate (source.substr(i*words, words),
+                         "en", lang, function (result) {
+        if (!result.error) {
+            document.getElementById("translation").innerHTML = document.getElementById("translation").innerHTML + result.translation;
+    } }); }
+ 
+  // Set the div invisible containing the original language
+        document.getElementById("story").style.display = 'none';
+        return false;
+ }
+ 
+ // Rollback original language
+ 
+function defaultLanguage() {
+        document.getElementById("translation").style.display='none';
+        document.getElementById("story").style.display = 'block';
+        return false;
+ }
+ 
+</script>
 </head>
 <body>
-
+ <div id="story"><h3>This is test run</h3></div>
+<div id="translation"></div>
+<a href="#" onclick="defaultLanguage();">Switch to English</a>
+<select onchange="changeLanguage(this.options[this.selectedIndex].value);">
+<option value="de">deutsch</option>
+<option value="pt">português</option>
+<option value="fr">français</option>
+<option value="ja">japanese</option>
+<option value="ar">arabic</option>
+<option value="it">italiano</option>
+<option value="ru">russian</option>
+<option value="po">polski</option>
+<option value="zh-CN">chinese</option>
+<option value="es">spanish</option>
+<option value="ko">korean</option>
+<option value="nl">dutch</option>
+<option value="hi">hindi</option>
+<option value="el">english</option>
+<option value="ro">româna(</option>
+</select>
 <div class="navbar">
   <div class="navbar-inner">
     <div class="container">

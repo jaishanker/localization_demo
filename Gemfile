@@ -17,7 +17,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer' #, :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 
@@ -50,7 +50,7 @@ gem 'ActiveAdmin-Globalize3-inputs'
 # gem 'debugger'
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'mysql2'
   gem 'rspec-rails'
   gem 'pry-rails'
 
@@ -60,6 +60,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg'
+#  gem 'pg'
   gem 'thin'
 end
